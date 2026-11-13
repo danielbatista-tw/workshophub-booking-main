@@ -60,6 +60,7 @@ Some vulnerabilities and norm violations are planted on purpose for a later work
 
 ## Git workflow and hooks
 
+- Commit in small pieces: as soon as a piece of work is finished, commit it on its own (use the `commit` skill) instead of batching several changes into one commit.
 - Husky `pre-commit` runs `scripts/branch-name-check.sh`, which requires branch names matching `^wh-<x>-<y>$`, e.g. `wh-2-session-registration`. It also runs `scripts/reasons-lint.sh`. Commits on `main` or on badly named branches fail.
 - `hooks/pre-push` runs test, lint, format-check and Trivy when it is installed.
 - `opencode.json` denies pushing to `main`. Work on feature branches.

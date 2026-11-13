@@ -51,3 +51,6 @@ coverage/
 # Temp
 tmp/
 temp/
+
+# TypeScript incremental build info
+*.tsbuildinfo

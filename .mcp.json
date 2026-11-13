@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "trello": {
+      "type": "http",
+      "url": "https://mcp.trello.com/v1"
+    },
+    "GitLab": {
+      "type": "http",
+      "url": "https://gitlab.com/api/v4/mcp"
+    }
+  }
+}

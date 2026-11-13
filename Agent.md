@@ -18,10 +18,17 @@ WorkshopHub is an internal training registration system. Employees browse and re
 
 ## MCP Permissions
 
-<!-- PLACEHOLDER: define allowed MCP servers/tools and scopes here. -->
+<!-- Keep in sync with CLAUDE.md. Servers are defined in .mcp.json. -->
 
-- TODO: list permitted MCP servers and tools.
-- TODO: list denied scopes (e.g. prod writes, secret access).
+Permitted servers: `trello` and `GitLab`.
+
+- **Allowed without asking (read-only):**
+  - Trello: `trelloRead*` tools and `trelloSearch`.
+  - GitLab: `get_*`, `list_*`, `search`, `search_labels` and `semantic_search`.
+- **Ask for explicit approval first (writes):**
+  - Trello: every `trelloWrite*` tool (boards, lists, cards, checklists, inbox, planner).
+  - GitLab: `accept_merge_request`, `add_branch`, `add_commit`, `fork_repository`, `link_work_items` and every `save_*` tool (merge requests, reviews, notes, pipelines, projects, work items).
+- **Denied:** any other MCP server, and secret access or production writes through any MCP tool.
 
 ## AGENT_BOUNDARY
 

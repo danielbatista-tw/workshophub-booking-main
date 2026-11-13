@@ -106,6 +106,11 @@ function TrainingSessionCard({ session, onRegistered }: Props) {
           {deliveryModeLabel(session.deliveryMode)}
         </span>
         {isFull && <span className="session-badge session-badge--full">Full</span>}
+        {!isFull && spotsLeft <= 3 && (
+          <span className="session-badge session-badge--full">
+            Only {spotsLeft} spot{spotsLeft !== 1 ? 's' : ''} left!
+          </span>
+        )}
       </div>
 
       <h3 className="session-card__title">{session.title}</h3>
